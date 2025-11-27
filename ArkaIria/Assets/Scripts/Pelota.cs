@@ -10,27 +10,21 @@ public class Pelota : MonoBehaviour
 
     private Transform jugador;
 
+    public float minY;
+
     private bool enMovimiento = false;
     void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
-        PosicionInicial();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enMovimiento == false && Input.GetKeyDown(KeyCode.Space))
-        {
-            LanzarPelota();
-        }
-    }
 
-    private void FixedUpdate()
-    {
-        if (enMovimiento)
-        {
-            float velocidadActual = 
-        }
+
+ 
+
     }
 }
