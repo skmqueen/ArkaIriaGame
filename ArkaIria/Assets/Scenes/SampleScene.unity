@@ -427,6 +427,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &179612121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179612123}
+  - component: {fileID: 179612122}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &179612122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179612121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7beec6983ad224ca3dc5810b4392e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloqueNormal: {fileID: 4662288034303329900, guid: ffb1bef6352c560458cbba9a67c2d907, type: 3}
+  bloqueDuro: {fileID: 4482766064556279552, guid: a0e4d5dc812c0494d8f37c3f32f5d05a, type: 3}
+  bloqueHierro: {fileID: 7151471237070584067, guid: 7a4c15c8b9b335242b660594cbedeaf1, type: 3}
+  posicionesBloques:
+  - {fileID: 1758155466}
+  - {fileID: 1346705342}
+  - {fileID: 375329825}
+  - {fileID: 2132437145}
+  - {fileID: 1253986565}
+  - {fileID: 1190135193}
+  - {fileID: 1850802052}
+  - {fileID: 1645932906}
+  - {fileID: 196148828}
+  - {fileID: 24461224}
+  - {fileID: 606411897}
+  - {fileID: 275723677}
+  - {fileID: 1127825092}
+  - {fileID: 178649623}
+  - {fileID: 223819068}
+  - {fileID: 1429264040}
+  - {fileID: 1611999255}
+  - {fileID: 1084812218}
+  - {fileID: 529069796}
+  - {fileID: 633477727}
+  - {fileID: 1906976494}
+  - {fileID: 1475416526}
+  - {fileID: 410271899}
+  - {fileID: 382230154}
+  - {fileID: 1274912782}
+  - {fileID: 793514195}
+  - {fileID: 650452710}
+  - {fileID: 1083424612}
+  - {fileID: 1524088916}
+  - {fileID: 873964279}
+--- !u!4 &179612123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179612121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1649125, y: -0.45603526, z: 0.03137125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &196148828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,7 +1388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &607666458
 Transform:
   m_ObjectHideFlags: 0
@@ -1803,7 +1881,7 @@ GameObject:
   - component: {fileID: 1028161551}
   m_Layer: 0
   m_Name: Pelota
-  m_TagString: Untagged
+  m_TagString: Pelota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1890,8 +1968,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889f1a11846c59448950ed54ae9da161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody2D: {fileID: 1028161553}
-  velocidad: 400
+  velocidadInicial: 8
+  velocidadMaxima: 15
+  incrementoVelocidadPorGolpe: 0.05
+  velocidadVerticalMinima: 2
+  velocidadHorizontalMinima: 1
+  paddle: {fileID: 0}
 --- !u!58 &1028161552
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1953,7 +2035,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!1 &1083424612
 GameObject:
@@ -3936,3 +4018,4 @@ SceneRoots:
   - {fileID: 1870037797}
   - {fileID: 1028161550}
   - {fileID: 318567499}
+  - {fileID: 179612123}

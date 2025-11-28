@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7115214386938614051}
   - component: {fileID: 7499919370000414478}
   - component: {fileID: -5075379255332375638}
+  - component: {fileID: -2606099780603453308}
   m_Layer: 0
   m_Name: Hit (28x24)_1 (2)
   m_TagString: Untagged
@@ -134,3 +135,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.4, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &-2606099780603453308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151471237070584067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f154fa1283278c34b9ea18c4a1445f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidasMaximas: 4
+  puntos: 40
