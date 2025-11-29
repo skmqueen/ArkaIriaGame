@@ -3,7 +3,7 @@ using UnityEngine;
 public class Pelota : MonoBehaviour
 {
     float playerOffsetY = 0.4f;
-    float velocidad = 12f;
+    float velocidad = 8f;
     Rigidbody2D rb;
     bool lanzada = false;
 
@@ -35,7 +35,7 @@ public class Pelota : MonoBehaviour
 
     void Lanzar()
     {
-        var dir = new Vector2(2f, 1f);
+        var dir = new Vector2(0f, 1f);
         rb.linearVelocity = dir.normalized * velocidad;
         lanzada = true;
     }
@@ -44,5 +44,44 @@ public class Pelota : MonoBehaviour
     {
         var contacto = collision.GetContact(0);
         rb.linearVelocity = Vector2.Reflect(rb.linearVelocity, contacto.normal);
+        CorregirAngulo();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("Muerte"))
+    {
+        Vidas.instance.PerderVida();
+        ReiniciarPelota();
     }
 }
+
+    void ReiniciarPelota()
+    {
+        lanzada = false;
+        rb.linearVelocity = Vector2.zero;
+        PosicionarSobrePlayer();
+    }
+
+    void CorregirAngulo()
+    {
+        float anguloMinimo = 15f;
+        Vector2 vel = rb.linearVelocity;
+        
+        float angulo = Mathf.Abs(Vector2.Angle(vel, Vector2.right));
+        
+        // Si está demasiado vertical (entre 75° y 105°)
+        if (angulo > 90f - anguloMinimo && angulo < 90f + anguloMinimo)
+        {
+            float signoX = vel.x >= 0 ? 1f : -1f;
+            float signoY = vel.y >= 0 ? 1f : -1f;
+            
+            vel = new Vector2(signoX * 2f, signoY * 1f).normalized * velocidad;
+            rb.linearVelocity = vel;
+        }
+    }
+
+}
+
+
+

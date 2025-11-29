@@ -9,13 +9,11 @@ public class Bloque : MonoBehaviour
     
     private int vidasActuales;
     private SpriteRenderer spriteRenderer;
-    private GameController gameController;
 
     void Start()
     {
         vidasActuales = vidasMaximas;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        gameController = FindObjectOfType<GameController>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -54,12 +52,8 @@ public class Bloque : MonoBehaviour
 
     void DestruirBloque()
     {
-        // Añadir puntos
-        if (gameController != null)
-        {
-            gameController.AñadirPuntos(puntos);
-            gameController.BloqueDestruido();
-        }
+        // Añadir puntos usando el sistema Score
+        Score.instance.SumarPuntos(puntos);
         
         // Destruir el bloque
         Destroy(gameObject);

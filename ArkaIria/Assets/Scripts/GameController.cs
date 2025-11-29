@@ -59,24 +59,4 @@ public class GameController : MonoBehaviour
             .setEase(LeanTweenType.easeOutBounce);
     }
 
-    public void AñadirPuntos(int puntos)
-    {
-        puntuacion += puntos;
-        Debug.Log("Puntuación: " + puntuacion);
-    }
-
-    public void BloqueDestruido()
-    {
-        bloquesDestruidos++;
-        
-        if (bloquesDestruidos >= bloquesTotales)
-        {
-            Debug.Log("¡Nivel completado!");
-        }
-    }
-
-    public int ObtenerPuntuacion()
-    {
-        return puntuacion;
-    }
 }
