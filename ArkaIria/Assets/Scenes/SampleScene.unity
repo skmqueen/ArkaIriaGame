@@ -1968,12 +1968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889f1a11846c59448950ed54ae9da161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadInicial: 8
-  velocidadMaxima: 15
-  incrementoVelocidadPorGolpe: 0.05
-  velocidadVerticalMinima: 2
-  velocidadHorizontalMinima: 1
-  paddle: {fileID: 0}
 --- !u!58 &1028161552
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2018,9 +2012,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028161548}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -3533,9 +3527,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1870037797}
   - component: {fileID: 1870037796}
-  - component: {fileID: 1870037799}
   - component: {fileID: 1870037798}
   - component: {fileID: 1870037800}
+  - component: {fileID: 1870037801}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3625,35 +3619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db35ac6c36e1f14286f298311baf14e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody2D: {fileID: 1870037799}
   velocidadJugador: 25
---- !u!50 &1870037799
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870037795}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 4
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
 --- !u!61 &1870037800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3700,6 +3666,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.1333334, y: 0.53333336}
   m_EdgeRadius: 0
+--- !u!50 &1870037801
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870037795}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &1906976494
 GameObject:
   m_ObjectHideFlags: 0

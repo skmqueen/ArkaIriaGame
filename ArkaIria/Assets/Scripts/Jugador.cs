@@ -2,28 +2,26 @@ using UnityEngine;
 
 public class Jugador : MonoBehaviour
 {
-    public Rigidbody2D rigidBody2D;
-
-    private float movimientoValor;
-
     public float velocidadJugador = 25f;
 
+    private float movimientoValor;
     private Vector2 direccion;
 
+    private Rigidbody2D rb;
 
-    void Start()
+    void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
+        // Detecta si el jugador pulsa derecha o izquierda
         movimientoValor = Input.GetAxisRaw("Horizontal");
 
-        if(movimientoValor == 1)
+        if (movimientoValor == 1)
         {
             direccion = Vector2.right;
-
         }
         else if (movimientoValor == -1)
         {
@@ -33,7 +31,11 @@ public class Jugador : MonoBehaviour
         {
             direccion = Vector2.zero;
         }
+    }
 
-        rigidBody2D.AddForce(direccion * velocidadJugador * Time.deltaTime * 100);
+    void FixedUpdate()
+    {
+        // Movimiento tipo Arkanoid: directo y sin física realista
+        rb.linearVelocity = direccion * velocidadJugador;
     }
 }

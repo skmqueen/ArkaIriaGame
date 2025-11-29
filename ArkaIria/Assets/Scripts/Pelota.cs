@@ -2,77 +2,47 @@ using UnityEngine;
 
 public class Pelota : MonoBehaviour
 {
-    [SerializeField] private float velocidad = 10f;
-    [SerializeField] private float anguloMinimo = 15f;
-    [SerializeField] private float anguloMaximo = 75f;
-    [SerializeField] private Transform paleta;
-    [SerializeField] private Vector3 offset = new Vector3(0f, 0.5f, 0f);
-    
-    private Rigidbody2D rb;
-    private bool enMovimiento = false;
-    private bool primerRebote = false; // Para permitir salida vertical
+    float playerOffsetY = 0.4f;
+    float velocidad = 12f;
+    Rigidbody2D rb;
+    bool lanzada = false;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f;
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
 
-    void Update()
+    private void Update()
     {
-        // Pelota sigue a la paleta hasta el saque
-        if (!enMovimiento)
+        if (!lanzada)
         {
-            transform.position = paleta.position + offset;
-            
-            // Lanzar pelota en vertical
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            PosicionarSobrePlayer();
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                rb.linearVelocity = Vector2.up * velocidad;
-                enMovimiento = true;
-                primerRebote = false;
+                Lanzar();
             }
         }
     }
 
-    void FixedUpdate()
+    void PosicionarSobrePlayer()
     {
-        if (enMovimiento && rb.linearVelocity.magnitude > 0.1f)
-        {
-            // Mantener velocidad constante
-            rb.linearVelocity = rb.linearVelocity.normalized * velocidad;
-            
-            // Solo corregir ángulos después del primer rebote
-            if (primerRebote)
-            {
-                CorregirAngulo();
-            }
-        }
+        var player = FindFirstObjectByType<Jugador>();
+        var playerPos = player.transform.position;
+
+        transform.position = playerPos + new Vector3(0, playerOffsetY, 0);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+
+    void Lanzar()
     {
-        // Activar corrección después del primer rebote
-        primerRebote = true;
+        var dir = new Vector2(2f, 1f);
+        rb.linearVelocity = dir.normalized * velocidad;
+        lanzada = true;
     }
 
-    void CorregirAngulo()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector2 vel = rb.linearVelocity;
-        
-        // Evitar movimiento muy horizontal (Y muy pequeña)
-        if (Mathf.Abs(vel.y) < 2f)
-        {
-            vel.y = Mathf.Sign(vel.y) * 2f;
-        }
-        
-        // Evitar movimiento muy vertical (X muy pequeña)
-        if (Mathf.Abs(vel.x) < 2f)
-        {
-            vel.x = Mathf.Sign(vel.x) * 2f;
-        }
-        
-        rb.linearVelocity = vel.normalized * velocidad;
+        var contacto = collision.GetContact(0);
+        rb.linearVelocity = Vector2.Reflect(rb.linearVelocity, contacto.normal);
     }
 }
