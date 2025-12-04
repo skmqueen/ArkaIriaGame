@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject bloqueHierro; // 4 vidas, 40 puntos
     
     [SerializeField] private GameObject[] posicionesBloques;
-    
+    [SerializeField] private GameObject Pausa;
     private int maxBloquesHierro = 10;
     private int puntuacion = 0;
     private int bloquesTotales = 0;
@@ -15,7 +15,13 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        //Pausa.setActive(false);
         GenerarBloques();
+    }
+
+    private void Update()
+    {
+
     }
 
     void GenerarBloques()

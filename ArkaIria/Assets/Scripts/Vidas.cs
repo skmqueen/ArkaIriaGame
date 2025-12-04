@@ -19,8 +19,6 @@ public class Vidas : MonoBehaviour
 
     public void PerderVida()
     {
-        if (vidas <= 0) return;
-
         vidas--;
         corazones[vidas].SetActive(false);
 

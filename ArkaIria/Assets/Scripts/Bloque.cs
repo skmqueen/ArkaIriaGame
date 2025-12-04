@@ -9,6 +9,8 @@ public class Bloque : MonoBehaviour
     
     private int vidasActuales;
     private SpriteRenderer spriteRenderer;
+    private int bloquesDestruidos;
+    private int bloquesActivos = 50;
 
     void Start()
     {
@@ -54,7 +56,12 @@ public class Bloque : MonoBehaviour
     {
         // Añadir puntos usando el sistema Score
         Score.instance.SumarPuntos(puntos);
-        
+        bloquesDestruidos++;
+
+        if(bloquesDestruidos >= bloquesActivos)
+        {
+            Menus.instance.Victoria("Victoria");
+        }
         // Destruir el bloque
         Destroy(gameObject);
     }
