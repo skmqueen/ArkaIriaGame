@@ -33,4 +33,9 @@ public class Menus : MonoBehaviour
     {
         SceneManager.LoadScene(GameOver);
     }
+
+    public void Victoria(string Victoria)
+    {
+        SceneManager.LoadScene(Victoria);
+    }
 }
