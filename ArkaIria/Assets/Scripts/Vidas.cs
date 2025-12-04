@@ -22,7 +22,6 @@ public class Vidas : MonoBehaviour
         vidas--;
         corazones[vidas].SetActive(false);
 
-
         if (vidas == 0)
         {
             Debug.Log("Game Over");
