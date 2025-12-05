@@ -11,13 +11,13 @@ public class GameController : MonoBehaviour
     private int maxBloquesHierro = 10;
     private int puntuacion = 0;
     private int bloquesTotales = 0;
-    private int bloquesDestruidos = 0;
 
     void Start()
     {
         //Pausa.setActive(false);
         GenerarBloques();
     }
+
 
     private void Update()
     {
@@ -64,5 +64,7 @@ public class GameController : MonoBehaviour
         LeanTween.scale(bloque, Vector3.one, 0.3f)
             .setEase(LeanTweenType.easeOutBounce);
     }
+
+    
 
 }
