@@ -372,8 +372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22b2baa76458de4f9afde246f7299eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 1643424719}
-  isRunning: 1
 --- !u!114 &171829192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2967,7 +2965,7 @@ RectTransform:
   m_GameObject: {fileID: 1204771253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 19.642378, y: 9.988978, z: 1}
+  m_LocalScale: {x: 19.642378, y: 10.288648, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1861098819}

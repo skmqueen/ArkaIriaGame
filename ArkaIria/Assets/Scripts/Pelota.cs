@@ -70,7 +70,7 @@ public class Pelota : MonoBehaviour
         
         float angulo = Mathf.Abs(Vector2.Angle(vel, Vector2.right));
         
-        // Si está demasiado vertical (entre 75° y 105°)
+        // Si está demasiado vertical
         if (angulo > 90f - anguloMinimo && angulo < 90f + anguloMinimo)
         {
             float signoX = vel.x >= 0 ? 1f : -1f;

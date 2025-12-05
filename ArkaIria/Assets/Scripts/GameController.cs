@@ -9,7 +9,6 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject[] posicionesBloques;
     [SerializeField] private GameObject Pausa;
     private int maxBloquesHierro = 10;
-    private int puntuacion = 0;
     private int bloquesTotales = 0;
 
     void Start()
