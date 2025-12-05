@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidasMaximas: 2
   puntos: 20
+  particulasPrefab: {fileID: 4090824989128051128, guid: 56389531474cd4b4892cbc0cbf070100, type: 3}
 --- !u!61 &-315149205521129623
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,9 +140,9 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.030154705, y: 0.08360767}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0.015625, z: 0, w: 0}
-    pivot: {x: 0.48015535, y: 0.39609915}
-    oldSize: {x: 1.5195312, y: 0.8046875}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.515625, y: 0.68359375}
     newSize: {x: 0.28, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
 
     public TextMeshProUGUI textoScore; 
     private int puntos;
+    public static int puntosFinales;
 
     void Awake()
     {
@@ -40,5 +41,9 @@ public class Score : MonoBehaviour
     public int ObtenerPuntos()
     {
         return puntos;
+    }
+    public void GuardarPuntosFinales()
+    {
+        puntosFinales = puntos;
     }
 }

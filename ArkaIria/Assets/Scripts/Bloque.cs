@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class Bloque : MonoBehaviour
 {
-    [SerializeField]
-    int vidasMaximas = 1; // 1=Normal, 2=Dura, 4=Hierro
-    [SerializeField] 
-    int puntos = 10; // 10=Normal, 20=Dura, 40=Hierro
-    
+    [SerializeField] int vidasMaximas = 1;
+    [SerializeField] int puntos = 10;
+
+    [Header("Partículas")]
+    [SerializeField] private GameObject particulasPrefab; // <--- PREFAB AQUÍ
+
     private int vidasActuales;
     private SpriteRenderer spriteRenderer;
-    private int bloquesDestruidos;
-    private int bloquesActivos = 50;
+
+    private static int bloquesDestruidos = 0; 
+    private static int bloquesActivos = 50;
 
     void Start()
     {
@@ -20,7 +22,6 @@ public class Bloque : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Verificar si colisiona con la pelota
         if (collision.gameObject.CompareTag("Pelota"))
         {
             RecibirGolpe();
@@ -30,10 +31,8 @@ public class Bloque : MonoBehaviour
     void RecibirGolpe()
     {
         vidasActuales--;
-        
-        // Cambiar apariencia según vidas restantes
         ActualizarApariencia();
-        
+
         if (vidasActuales <= 0)
         {
             DestruirBloque();
@@ -42,7 +41,6 @@ public class Bloque : MonoBehaviour
 
     void ActualizarApariencia()
     {
-        // Hacer más transparente según vidas restantes
         if (spriteRenderer != null)
         {
             float alpha = (float)vidasActuales / vidasMaximas;
@@ -54,15 +52,49 @@ public class Bloque : MonoBehaviour
 
     void DestruirBloque()
     {
-        // Añadir puntos usando el sistema Score
         Score.instance.SumarPuntos(puntos);
         bloquesDestruidos++;
 
-        if(bloquesDestruidos >= bloquesActivos)
+     if (particulasPrefab != null)
+{
+    // Instanciamos las partículas en la posición del bloque
+    GameObject fx = Instantiate(particulasPrefab, transform.position, Quaternion.identity);
+
+    // Accedemos al ParticleSystem
+    ParticleSystem ps = fx.GetComponent<ParticleSystem>();
+    if (ps != null)
+    {
+        var main = ps.main;
+
+        // Creamos el gradient amarillo → azul → rojo
+        Gradient grad = new Gradient();
+        grad.SetKeys(
+            new GradientColorKey[] {
+                new GradientColorKey(Color.yellow, 0f), // inicio
+                new GradientColorKey(Color.blue, 0.5f),  // medio
+                new GradientColorKey(Color.red, 1f)     // final
+            },
+            new GradientAlphaKey[] {
+                new GradientAlphaKey(1f, 0f), // opacidad al inicio
+                new GradientAlphaKey(1f, 0.5f),
+                new GradientAlphaKey(0f, 1f)  // desaparece al final
+            }
+        );
+
+        main.startColor = grad;
+    }
+
+    // Destruir el sistema de partículas automáticamente después de 2 segundos
+    Destroy(fx, 2f);
+}
+
+        // ----------------------------------
+
+        if (bloquesDestruidos >= bloquesActivos)
         {
             Menus.instance.Victoria("Victoria");
         }
-        // Destruir el bloque
+
         Destroy(gameObject);
     }
 }

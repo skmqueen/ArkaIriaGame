@@ -26,6 +26,7 @@ public class Vidas : MonoBehaviour
         {
             Debug.Log("Game Over");
             // Aquí puedes añadir lógica de reinicio o menú de Game Over
+            Score.instance.GuardarPuntosFinales();
             Menus.instance.GameOver("GameOver");
         }
     }

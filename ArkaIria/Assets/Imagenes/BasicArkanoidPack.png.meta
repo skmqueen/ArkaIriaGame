@@ -497,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BasicArkanoidPack_0: 8867750551611922713
+      BasicArkanoidPack_1: -562155013417825825
+      BasicArkanoidPack_10: 3345604596107148701
+      BasicArkanoidPack_11: 7609730426921878769
+      BasicArkanoidPack_12: -7250548680220842617
+      BasicArkanoidPack_13: -44924107754558514
+      BasicArkanoidPack_14: 8964339832151122086
+      BasicArkanoidPack_2: 690696643596080731
+      BasicArkanoidPack_3: -5874907438164824662
+      BasicArkanoidPack_4: -5675765125158142219
+      BasicArkanoidPack_5: 6855581029180145791
+      BasicArkanoidPack_6: 1447673167173226883
+      BasicArkanoidPack_7: 3119802071192771808
+      BasicArkanoidPack_8: 2347807252193122458
+      BasicArkanoidPack_9: -9092591595372289376
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
