@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: c39dd321b0dc0e544a98ae9b7564c1ba
+guid: 39323401d58c4254ba8cc463f6db16ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3850406623447134329
-    second: pngimg.com - game_over_PNG42_0
+      213: 4357115355372073280
+    second: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_0
   - first:
-      213: -8779653416702304713
-    second: pngimg.com - game_over_PNG42_1
+      213: 4124290643808331743
+    second: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_1
   - first:
-      213: 4296240501256724521
-    second: pngimg.com - game_over_PNG42_2
+      213: 5682234386328478750
+    second: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_2
   - first:
-      213: -8172010596523171877
-    second: pngimg.com - game_over_PNG42_3
+      213: 1722957794220371807
+    second: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_3
   - first:
-      213: -1033129908851745946
-    second: pngimg.com - game_over_PNG42_4
+      213: 7381479040916372893
+    second: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_4
   - first:
-      213: 6817754687976315162
-    second: pngimg.com - game_over_PNG42_5
+      213: -7290279666323301793
+    second: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_5
   - first:
-      213: 1160766763330334523
-    second: pngimg.com - game_over_PNG42_6
-  - first:
-      213: 2384898730072286064
-    second: pngimg.com - game_over_PNG42_7
+      213: -4687481316381244075
+    second: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pngimg.com - game_over_PNG42_0
+      name: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 359
-        width: 152
-        height: 212
+        x: 0
+        y: 219
+        width: 192
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 970b0677c646f6530800000000000000
-      internalID: 3850406623447134329
+      spriteID: 0413a5aa455977c30800000000000000
+      internalID: 4357115355372073280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngimg.com - game_over_PNG42_1
+      name: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_1
       rect:
         serializedVersion: 2
-        x: 269
-        y: 359
-        width: 152
-        height: 212
+        x: 220
+        y: 219
+        width: 102
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +168,64 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73e1a6eebb7682680800000000000000
-      internalID: -8779653416702304713
+      spriteID: fd7a9a63d7c6c3930800000000000000
+      internalID: 4124290643808331743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngimg.com - game_over_PNG42_2
+      name: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_2
       rect:
         serializedVersion: 2
-        x: 449
-        y: 359
+        x: 340
+        y: 219
+        width: 92
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e146e9f811a5bde40800000000000000
+      internalID: 5682234386328478750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 219
+        width: 91
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5fee773cfc29e710800000000000000
+      internalID: 1722957794220371807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
         width: 182
-        height: 212
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 920ad0339ff4f9b30800000000000000
-      internalID: 4296240501256724521
+      spriteID: d9dbfc63418407660800000000000000
+      internalID: 7381479040916372893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngimg.com - game_over_PNG42_3
+      name: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_5
       rect:
         serializedVersion: 2
-        x: 659
-        y: 359
+        x: 230
+        y: 0
         width: 152
-        height: 212
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bdf128dd8af279e80800000000000000
-      internalID: -8172010596523171877
+      spriteID: f5adb8fd449b3da90800000000000000
+      internalID: -7290279666323301793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngimg.com - game_over_PNG42_4
+      name: pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_6
       rect:
         serializedVersion: 2
-        x: 89
-        y: 59
-        width: 152
-        height: 212
+        x: 400
+        y: 0
+        width: 141
+        height: 191
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,74 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66b5f0852d599a1f0800000000000000
-      internalID: -1033129908851745946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngimg.com - game_over_PNG42_5
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 59
-        width: 152
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a19159644c78d9e50800000000000000
-      internalID: 6817754687976315162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngimg.com - game_over_PNG42_6
-      rect:
-        serializedVersion: 2
-        x: 449
-        y: 59
-        width: 152
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3f6263a83fdb1010800000000000000
-      internalID: 1160766763330334523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngimg.com - game_over_PNG42_7
-      rect:
-        serializedVersion: 2
-        x: 629
-        y: 59
-        width: 152
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0732d3f52ccd81120800000000000000
-      internalID: 2384898730072286064
+      spriteID: 555c0ddf398b2feb0800000000000000
+      internalID: -4687481316381244075
       vertices: []
       indices: 
       edges: []
@@ -323,14 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pngimg.com - game_over_PNG42_0: 3850406623447134329
-      pngimg.com - game_over_PNG42_1: -8779653416702304713
-      pngimg.com - game_over_PNG42_2: 4296240501256724521
-      pngimg.com - game_over_PNG42_3: -8172010596523171877
-      pngimg.com - game_over_PNG42_4: -1033129908851745946
-      pngimg.com - game_over_PNG42_5: 6817754687976315162
-      pngimg.com - game_over_PNG42_6: 1160766763330334523
-      pngimg.com - game_over_PNG42_7: 2384898730072286064
+      pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_0: 4357115355372073280
+      pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_1: 4124290643808331743
+      pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_2: 5682234386328478750
+      pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_3: 1722957794220371807
+      pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_4: 7381479040916372893
+      pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_5: -7290279666323301793
+      pixelated-victory-trophyand-text-7382memjslauv2ru-7382memjslauv2ru_6: -4687481316381244075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
