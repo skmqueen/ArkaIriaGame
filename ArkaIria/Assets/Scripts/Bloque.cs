@@ -6,7 +6,7 @@ public class Bloque : MonoBehaviour
     [SerializeField] int puntos = 10;
 
     [Header("Partículas")]
-    [SerializeField] private GameObject particulasPrefab; // <--- PREFAB AQUÍ
+    [SerializeField] private GameObject particulasPrefab;
 
     private int vidasActuales;
     private SpriteRenderer spriteRenderer;
@@ -30,6 +30,7 @@ public class Bloque : MonoBehaviour
 
     void RecibirGolpe()
     {
+        AudioManager.instance.ReproducirSonidoColision();
         vidasActuales--;
         ActualizarApariencia();
 
@@ -66,7 +67,7 @@ public class Bloque : MonoBehaviour
     {
         var main = ps.main;
 
-        // Creamos el gradient amarillo → azul → rojo
+        // Creamos el gradient amarillo - azul - rojo  LIDL
         Gradient grad = new Gradient();
         grad.SetKeys(
             new GradientColorKey[] {
@@ -88,7 +89,6 @@ public class Bloque : MonoBehaviour
     Destroy(fx, 2f);
 }
 
-        // ----------------------------------
 
         if (bloquesDestruidos >= bloquesActivos)
         {

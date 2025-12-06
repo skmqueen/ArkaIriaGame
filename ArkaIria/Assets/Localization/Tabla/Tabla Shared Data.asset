@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Tabla Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Tabla
+  m_TableCollectionNameGuidString: a58bcff8ace4ee043add5d301c37a434
+  m_Entries:
+  - m_Id: 7570456576
+    m_Key: _jugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60808757248
+    m_Key: _salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108372164608
+    m_Key: _reintentar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175262924800
+    m_Key: "_men\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242568921088
+    m_Key: _puntos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292753768448
+    m_Key: _tiempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 348244410368
+    m_Key: _fraseInicio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 544558809088
+    m_Key: _fraseJuego
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4602394189414531286
+  references:
+    version: 2
+    RefIds:
+    - rid: 4602394189414531286
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1765009259784

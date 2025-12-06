@@ -35,7 +35,7 @@ public class Jugador : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Movimiento tipo Arkanoid: directo y sin física realista
+
         rb.linearVelocity = direccion * velocidadJugador;
     }
 }

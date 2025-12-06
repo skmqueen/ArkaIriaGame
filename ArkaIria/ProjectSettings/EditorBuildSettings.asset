@@ -18,5 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Victoria.unity
     guid: eaf6c425531751d4e8f95b42b0188b80
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: d9997e8dbb25bb9448c69c1ddee31044, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: e9c4fc2926d61e142b6bc5f75a2b2fcb, type: 2}
   m_UseUCBPForAssetBundles: 0

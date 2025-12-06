@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Pelota : MonoBehaviour
 {
-    float playerOffsetY = 0.4f;
-    float velocidad = 8f;
+    public float playerOffsetY = 0.4f;
+    public float velocidad = 8f;
     Rigidbody2D rb;
     bool lanzada = false;
 
@@ -17,7 +17,7 @@ public class Pelota : MonoBehaviour
         if (!lanzada)
         {
             PosicionarSobrePlayer();
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetButtonDown("Jump"))
             {
                 Lanzar();
             }
@@ -35,6 +35,7 @@ public class Pelota : MonoBehaviour
 
     void Lanzar()
     {
+        AudioManager.instance.ReproducirSonidoSacarPelota();
         var dir = new Vector2(0f, 1f);
         rb.linearVelocity = dir.normalized * velocidad;
         lanzada = true;
