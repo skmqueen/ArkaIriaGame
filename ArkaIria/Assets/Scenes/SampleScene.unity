@@ -610,6 +610,7 @@ MonoBehaviour:
   - {fileID: 382230154}
   Pausa: {fileID: 0}
   mensaje: {fileID: 259134795}
+  powerUpDestructorPrefab: {fileID: 7669855743206070709, guid: a74b24a98b100e342bf376f266f94aa4, type: 3}
 --- !u!4 &179612123
 Transform:
   m_ObjectHideFlags: 0
@@ -3416,6 +3417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889f1a11846c59448950ed54ae9da161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOffsetY: 0.4
+  velocidad: 8
 --- !u!50 &1028161553
 Rigidbody2D:
   serializedVersion: 5

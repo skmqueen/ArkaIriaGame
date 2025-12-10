@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoTiempo;
 
     public static float tiempoTranscurrido = 0f;
-    private bool contando = true;
+    private static bool contando = true;
 
     void Update()
     {
@@ -28,8 +28,14 @@ public class Timer : MonoBehaviour
         }
     }
 
-    public void DetenerTiempo()
+    public static void DetenerTiempo()
     {
         contando = false;
+    }
+
+    public static void ReiniciarTiempo()
+    {
+        tiempoTranscurrido = 0f;
+        contando = true;
     }
 }
