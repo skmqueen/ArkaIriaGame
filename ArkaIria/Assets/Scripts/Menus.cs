@@ -13,7 +13,7 @@ public class Menus : MonoBehaviour
             Destroy(gameObject);
     }
 
-    // Cargar la siguiente escena en el Build Settings
+
     public void Jugar()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -25,10 +25,10 @@ public class Menus : MonoBehaviour
         Application.Quit();
     }
 
-    // Reiniciar la partida cargando una escena específica
+
     public void Restart(string SampleScene)
     {
-        // Reiniciar puntuación
+
         if (Score.instance != null)
             Score.instance.ResetearScore();
 
@@ -43,20 +43,20 @@ public class Menus : MonoBehaviour
         Bloque.ResetContadores();
 
 
-        // Cargar la escena indicada
+
         SceneManager.LoadScene(SampleScene);
     }
 
-    // Cargar escena de Game Over
+ 
     public void GameOver(string GameOver)
     {
         SceneManager.LoadScene(GameOver);
     }
 
-    // Cargar escena de Victoria
+
     public void Victoria(string Victoria)
     {
-        // Guardar puntuación final antes de cambiar de escena
+
         if (Score.instance != null)
             Score.instance.GuardarPuntosFinales();
 

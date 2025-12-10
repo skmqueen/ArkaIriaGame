@@ -7,7 +7,6 @@ public class EstadoDestructorTotal : IEstado
 
     public void Entrar(GameController controlador)
     {
-        Debug.Log("Estado: Destructor Total activado - La próxima colisión destruirá todos los bloques");
         powerUpUsado = false;
     }
 
@@ -18,14 +17,11 @@ public class EstadoDestructorTotal : IEstado
     public void Salir(GameController controlador)
     {
 
-        Debug.Log("Estado: Destructor Total finalizado");
     }
 
     public void UsarPowerUp(GameController controlador)
     {
         if (powerUpUsado) return;
-
-        Debug.Log("¡Power-Up usado! Destruyendo todos los bloques...");
 
         Bloque[] todosLosBloques = controlador.GetComponentsInChildren<Bloque>();
 

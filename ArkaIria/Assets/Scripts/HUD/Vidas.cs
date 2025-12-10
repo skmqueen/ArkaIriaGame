@@ -24,7 +24,6 @@ public class Vidas : MonoBehaviour
 
         if (vidas == 0)
         {
-            Debug.Log("Game Over");
             Score.instance.GuardarPuntosFinales();
             Menus.instance.GameOver("GameOver");
         }

@@ -19,7 +19,7 @@ public class PowerUpDestructor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Si lo recoge el jugador
+ 
         if (collision.CompareTag("Jugador"))
         {
             // Buscar el GameController y cambiar al estado destructor
@@ -31,7 +31,6 @@ public class PowerUpDestructor : MonoBehaviour
             }
             else
             {
-                Debug.LogError("No se encontró el GameController en la escena");
             }
             
             // Destruir el power-up

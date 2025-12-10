@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f154fa1283278c34b9ea18c4a1445f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidasMaximas: 1
+  vidasMaximas: 4
   puntos: 40
   particulasPrefab: {fileID: 4090824989128051128, guid: 56389531474cd4b4892cbc0cbf070100, type: 3}
 --- !u!61 &-1981812562093920577

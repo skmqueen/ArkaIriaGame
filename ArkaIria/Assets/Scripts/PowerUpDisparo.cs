@@ -26,7 +26,6 @@ public class PowerUpDisparo : MonoBehaviour
             }
             else
             {
-                Debug.LogError("No se encontró el GameController en la escena");
             }
             
             Destroy(gameObject);

@@ -15,8 +15,7 @@ public class Proyectil : MonoBehaviour
 
     void Update()
     {
-        // Movimiento hacia adelante según la rotación del proyectil
-        transform.Translate(transform.up * velocidad * Time.deltaTime);
+        transform.Translate(Vector2.up * velocidad * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)

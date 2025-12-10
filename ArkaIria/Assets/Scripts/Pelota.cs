@@ -65,13 +65,13 @@ public class Pelota : MonoBehaviour
     }
 
     void CorregirAngulo()
+    //Script para que la pelota tenga las direcciones lo más parecidas a la original
     {
         float anguloMinimo = 15f;
         Vector2 vel = rb.linearVelocity;
         
         float angulo = Mathf.Abs(Vector2.Angle(vel, Vector2.right));
         
-        // Si está demasiado vertical
         if (angulo > 90f - anguloMinimo && angulo < 90f + anguloMinimo)
         {
             float signoX = vel.x >= 0 ? 1f : -1f;

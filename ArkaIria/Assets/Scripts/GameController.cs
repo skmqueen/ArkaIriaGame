@@ -119,7 +119,6 @@ public class GameController : MonoBehaviour
             if (scriptBloque != null)
             {
                 scriptBloque.ConfigurarPowerUp(powerUpDestructorPrefab);
-                Debug.Log("Bloque rojo seleccionado para soltar power-up destructor");
             }
         }
 
@@ -132,7 +131,6 @@ public class GameController : MonoBehaviour
             if (scriptBloque != null)
             {
                 scriptBloque.ConfigurarPowerUp(powerUpDisparoPrefab);
-                Debug.Log("Bloque normal seleccionado para soltar power-up de disparo");
             }
         }
     }

@@ -32,7 +32,6 @@ public class EstadoDisparo : IEstado
 
     public void Salir(GameController controlador)
     {
-        Debug.Log("Estado: Modo Disparo finalizado");
         estadoActivo = false;
     }
 
