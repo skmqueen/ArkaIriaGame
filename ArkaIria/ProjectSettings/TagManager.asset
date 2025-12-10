@@ -7,6 +7,9 @@ TagManager:
   - Pelota
   - Paleta
   - Muerte
+  - Bala
+  - Jugador
+  - Bloque
   layers:
   - Default
   - TransparentFX
