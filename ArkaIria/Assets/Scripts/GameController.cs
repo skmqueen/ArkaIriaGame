@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject Pausa;
     [SerializeField] private GameObject mensaje;
     [SerializeField] private GameObject powerUpDestructorPrefab;
+    [SerializeField] private GameObject powerUpDisparoPrefab;
+    [SerializeField] private GameObject proyectilPrefab;
     
     private int maxBloquesHierro = 10;
     private int bloquesTotales = 0;
@@ -71,6 +73,7 @@ public class GameController : MonoBehaviour
     {
         int contadorHierro = 0;
         System.Collections.Generic.List<GameObject> bloquesRojosGenerados = new System.Collections.Generic.List<GameObject>();
+        System.Collections.Generic.List<GameObject> bloquesNormalesGenerados = new System.Collections.Generic.List<GameObject>();
         
         for (int i = 0; i < posicionesBloques.Length; i++)
         {
@@ -98,6 +101,10 @@ public class GameController : MonoBehaviour
             {
                 bloquesRojosGenerados.Add(bloque);
             }
+            else if (prefabSeleccionado == bloqueNormal)
+            {
+                bloquesNormalesGenerados.Add(bloque);
+            }
             
             AnimarBloque(bloque);
             bloquesTotales++;
@@ -112,7 +119,20 @@ public class GameController : MonoBehaviour
             if (scriptBloque != null)
             {
                 scriptBloque.ConfigurarPowerUp(powerUpDestructorPrefab);
-                Debug.Log($"Bloque rojo seleccionado para soltar power-up en posición: {bloqueSeleccionado.transform.position}");
+                Debug.Log("Bloque rojo seleccionado para soltar power-up destructor");
+            }
+        }
+
+        if (bloquesNormalesGenerados.Count > 0 && powerUpDisparoPrefab != null)
+        {
+            int indiceAleatorio = Random.Range(0, bloquesNormalesGenerados.Count);
+            GameObject bloqueSeleccionado = bloquesNormalesGenerados[indiceAleatorio];
+            
+            Bloque scriptBloque = bloqueSeleccionado.GetComponent<Bloque>();
+            if (scriptBloque != null)
+            {
+                scriptBloque.ConfigurarPowerUp(powerUpDisparoPrefab);
+                Debug.Log("Bloque normal seleccionado para soltar power-up de disparo");
             }
         }
     }
@@ -148,5 +168,20 @@ public class GameController : MonoBehaviour
     public void IniciarContadorVictoria(float segundos)
     {
         tiempoEsperaVictoria = segundos;
+    }
+
+    public void DispararProyectil()
+    {
+        Jugador jugador = FindFirstObjectByType<Jugador>();
+        if (jugador != null && proyectilPrefab != null)
+        {
+            Vector3 posicionDisparo = jugador.transform.position + new Vector3(0, 0.5f, 0);
+            Instantiate(proyectilPrefab, posicionDisparo, Quaternion.identity);
+            
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.ReproducirSonidoColision();
+            }
+        }
     }
 }

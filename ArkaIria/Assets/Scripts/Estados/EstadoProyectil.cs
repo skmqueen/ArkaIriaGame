@@ -1,16 +1,43 @@
 using UnityEngine;
 
-public class EstadoProyectil : MonoBehaviour
+public class EstadoDisparo : IEstado
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private float tiempoRestante = 10f;
+    private bool estadoActivo = false;
+
+    public void Entrar(GameController controlador)
     {
-        
+        Debug.Log("Estado: Modo Disparo activado - 10 segundos");
+        tiempoRestante = 10f;
+        estadoActivo = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Ejecutar(GameController controlador)
     {
-        
+        if (!estadoActivo) return;
+
+        tiempoRestante -= Time.deltaTime;
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            controlador.DispararProyectil();
+        }
+
+        if (tiempoRestante <= 0f)
+        {
+            estadoActivo = false;
+            controlador.CambiarEstado(new EstadoNeutral());
+        }
+    }
+
+    public void Salir(GameController controlador)
+    {
+        Debug.Log("Estado: Modo Disparo finalizado");
+        estadoActivo = false;
+    }
+
+    public float ObtenerTiempoRestante()
+    {
+        return tiempoRestante;
     }
 }

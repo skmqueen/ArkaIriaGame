@@ -1,16 +1,13 @@
 using UnityEngine;
 
-// Script para el prefab del power-up que cae
-public class PowerUpDestructor : MonoBehaviour
+public class PowerUpDisparo : MonoBehaviour
 {
     [SerializeField] private float velocidadCaida = 3f;
 
     void Update()
     {
-        // El power-up cae hacia abajo
         transform.Translate(Vector3.down * velocidadCaida * Time.deltaTime);
 
-        // Destruir si sale de la pantalla
         if (transform.position.y < -10f)
         {
             Destroy(gameObject);
@@ -19,22 +16,19 @@ public class PowerUpDestructor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Si lo recoge el jugador
         if (collision.CompareTag("Jugador"))
         {
-            // Buscar el GameController y cambiar al estado destructor
             GameController gameController = Object.FindFirstObjectByType<GameController>();
             
             if (gameController != null)
             {
-                gameController.CambiarEstado(new EstadoDestructorTotal());
+                gameController.CambiarEstado(new EstadoDisparo());
             }
             else
             {
                 Debug.LogError("No se encontró el GameController en la escena");
             }
             
-            // Destruir el power-up
             Destroy(gameObject);
         }
 

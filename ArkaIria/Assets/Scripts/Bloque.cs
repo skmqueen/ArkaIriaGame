@@ -46,6 +46,18 @@ public class Bloque : MonoBehaviour
             
             RecibirGolpe();
         }
+        else if (collision.gameObject.CompareTag("Bala"))
+        {
+            RecibirGolpe();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bala"))
+        {
+            RecibirGolpe();
+        }
     }
 
     public void RecibirGolpe()

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4570951198585623817}
   - component: {fileID: -8321684653973307167}
   m_Layer: 0
-  m_Name: Square
+  m_Name: PowerUpDestructor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
