@@ -611,6 +611,8 @@ MonoBehaviour:
   Pausa: {fileID: 0}
   mensaje: {fileID: 259134795}
   powerUpDestructorPrefab: {fileID: 7669855743206070709, guid: a74b24a98b100e342bf376f266f94aa4, type: 3}
+  powerUpDisparoPrefab: {fileID: 6131791413178702993, guid: 99f638ec7122fc946b543d7260ffb2d0, type: 3}
+  proyectilPrefab: {fileID: 378744879546559282, guid: 0e15aa899a342ae4cb522408fac8ad73, type: 3}
 --- !u!4 &179612123
 Transform:
   m_ObjectHideFlags: 0
@@ -1971,8 +1973,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score : '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7958ece52e9f648459f79169eed3d1ca, type: 2}
+  m_sharedMaterial: {fileID: 1913262528268338477, guid: 7958ece52e9f648459f79169eed3d1ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2941,8 +2943,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Lanza la pelota y destruye todos los bloques
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7958ece52e9f648459f79169eed3d1ca, type: 2}
+  m_sharedMaterial: {fileID: 1913262528268338477, guid: 7958ece52e9f648459f79169eed3d1ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4377,8 +4379,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Time :'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7958ece52e9f648459f79169eed3d1ca, type: 2}
+  m_sharedMaterial: {fileID: 1913262528268338477, guid: 7958ece52e9f648459f79169eed3d1ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4812,7 +4814,7 @@ GameObject:
   - component: {fileID: 1870037802}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
